@@ -1,0 +1,223 @@
+$primary-color: #3498db;
+$background-color: #f4f4f4;
+$button-color: #2ecc71;
+$card-bg-color: #fff;
+$input-border: #ccc;
+@use 'sass:color';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: $card-bg-color;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    //font-size: 2.5rem;
+    color: $primary-color;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    grid-column: span 2;
+    background-color: $button-color;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: color.adjust($button-color, $lightness: -10%);
+    }
+}
+
+.result-section {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}
+
+.city-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+#city-image {
+    width: 100%; 
+    height: 70%; 
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+.resultGrid {
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-btn {
+        grid-column: span 1;
+    }
+
+    .city-info {
+        grid-template-columns: 1fr;
+    }
+
+    #city-image {
+        //width: 200px;
+        //height: 200px;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .trip-container {
+        width: 100%;
+        height: 80%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+
+    #city-image {
+        //width: 180px;
+        //height: 180px;
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+
+    }
+    .trip-container {
+        width: 100%;
+        height: 80%;
+    }
+
+    .resultGrid {
+        font-size: 1.2rem;
+        
+    }
+}
+
+
+
+.trip-container {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.city-info > img {
+    width: 50%;
+    height: 100%;
+}
+
+.city-info > *:not(#city-image) {
+    flex: 1;
+}
+
+
+
+.subbuttons {
+    display: flex;
+    gap: 30px;
+}
+.sub-button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.save-btn { background-color: green; color: white; border-radius: 5px; flex: 1; font-size: 1.3rem;}
+.remove-btn { background-color: red; color: white; border-radius: 5px; flex: 1; font-size: 1.3rem;}
+
+.hover-effect:hover {
+    cursor: pointer; 
+}
