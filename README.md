@@ -6,7 +6,7 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 ## Features
 
-- **Backend**: Express nodejs server with Get API .
+- **Backend**: Express nodejs(version v16.20.2) server with Get API's .
 - **Frontend**: Interactive UI interact with Backend
   
 ---
