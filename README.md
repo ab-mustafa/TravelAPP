@@ -6,7 +6,7 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 ## Features
 
-- **Backend**: Express nodejs(version v16.20.2) server with Get API's .
+- **Backend**: Express nodejs(version **v16.20.2**) server with Get API's .
 - **Frontend**: Interactive UI interact with Backend
   
 ---
@@ -21,8 +21,8 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 1. Clone the repository:
    ```
-   git clone <TBD>
-   cd Planner
+   git clone https://github.com/ab-mustafa/TravelAPP.git
+   cd TravelAPP
 
 ## Usage
 
