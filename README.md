@@ -6,7 +6,7 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 ## Features
 
-- **Backend**: Express nodejs(version v16.20.2) server with Get API's .
+- **Backend**: Express nodejs(version v22.14.0) server with Get API's .
 - **Frontend**: Interactive UI interact with Backend
   
 ---
@@ -26,11 +26,19 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 ## Usage
 
-1. Initiate backend server.
+1. Set environment variables in .env file.
+    ```
+    WEATHER_BIT_KEY=
+    PIXABAY_KEY=
+    GEONAMES_KEY=
+    ```
+
+2. Initiate backend server.
     ```
     npm run start
     ```
-2. Initiate Client application.
+    
+3. Initiate Client application.
     ```
     npm run build-dev
     ```
