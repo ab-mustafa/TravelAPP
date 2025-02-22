@@ -40,5 +40,6 @@ This project is a full-stack application consisting of a **Node.js backend** and
     
 3. Initiate Client application.
     ```
-    npm run build-dev
+    npm run build-prod
     ```
+
