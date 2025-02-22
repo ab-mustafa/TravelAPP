@@ -33,12 +33,14 @@ This project is a full-stack application consisting of a **Node.js backend** and
     GEONAMES_KEY=
     ```
 
-2. Initiate backend server.
+2. Install packege depndacy in the project under dependencies in package.json file. 
+
+3. Initiate backend server.
     ```
     npm run start
     ```
     
-3. Initiate Client application.
+4. Initiate Client application.
     ```
     npm run build-prod
     ```
