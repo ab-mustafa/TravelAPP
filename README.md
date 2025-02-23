@@ -35,13 +35,16 @@ This project is a full-stack application consisting of a **Node.js backend** and
 
 2. Install packege depndacy in the project under dependencies in package.json file. 
 
-3. Initiate backend server.
-    ```
-    npm run start
-    ```
-    
-4. Initiate Client application.
+
+
+3. Initiate Client application.
     ```
     npm run build-prod
     ```
 
+4. Initiate backend server.
+    ```
+    npm run start
+    ```
+
+5. From browser open localhost:8000 

@@ -11,13 +11,19 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 require("dotenv").config();
-
+var path = require('path');
+app.use(express.static('dist'));
 
 const secret_keys = {
     "WEATHER_BIT_KEY": process.env.WEATHER_BIT_KEY,
     "PIXABAY_KEY": process.env.PIXABAY_KEY,
     "GEONAMES_KEY": process.env.GEONAMES_KEY
 }
+
+app.get('/', function (req, res) {
+    res.sendFile(path.resolve('dist/index.html'))
+})
+
 
 app.get("/trip-info", async (req, res) => {
     try {
