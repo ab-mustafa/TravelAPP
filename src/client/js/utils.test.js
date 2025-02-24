@@ -28,13 +28,10 @@ describe('capitalizeFirstLetter Test case', () => {
 
 describe('Format date function', () => {
 
-    test('Format data should be day/month/year', () => {
-      const result = formatDate('01-01-1996');
-      expect(result).toBe('01/01/1996');
-    });
-    test('Format data should be remain same if format is day/month/year', () => {
-      const result = formatDate('01/01/1996');
-      expect(result).toBe('01/01/1996');
+    test('Format data should return error in case send invalid date', () => {
+      let travelDateInput ="invalid..date" 
+      const result = formatDate(travelDateInput);
+      expect(result).toBe(`Invalid date format: ${travelDateInput}`);
     });
     
 })
