@@ -19,11 +19,6 @@ const resultFlex = document.getElementById('resultContainer');
 const imageOutput = document.getElementById('city-image');
 const title = document.getElementById('title')
 
-// Disable selection of previous days in Calender.
-const tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);  // Increment the day by 1
-const tomorrowDate = tomorrow.toISOString().split('T')[0];  // Convert to yyyy-mm-dd format
-travelDateInput.setAttribute("min", tomorrowDate);
 
 
 function getUserInputs(){
@@ -203,6 +198,12 @@ async function getData() {
 */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+   // Disable selection of previous days in Calender.
+   const currentDate = new Date().toISOString().split('T')[0];  // Convert to yyyy-mm-dd format
+   travelDateInput.setAttribute("min", currentDate);
+
+
   if (getTripButton) {
     getTripButton.addEventListener("click", async () => {
           await getData();
